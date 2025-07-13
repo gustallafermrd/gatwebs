@@ -263,7 +263,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-orange-500 mb-16">Nuestros Servicios</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <ServiceCard
-              icon={<Globe className="h-10 w-10 text-[rgb(238,106,26)]" />}
+              icon={<Globe  />}
               title="Desarrollo Web"
               description="Páginas web personalizadas y optimizadas para todos los dispositivos. Especializados en el rubro del turismo"
             />
