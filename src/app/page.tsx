@@ -68,10 +68,10 @@ export default function Home() {
                 <p className="mt-6 text-lg text-orange-100">
                   Nos dedicamos a transformar ideas en realidades digitales. Somos expertos en el desarrollo web y ofrecemos una amplia gama de servicios para ayudarte a crecer en línea.
                 </p>
-                <button className="mt-8 px-8 py-3 bg-gradient-to-r from-white to-orange-50 text-[rgb(238,106,26)] font-semibold rounded-lg hover:opacity-90 transition duration-300 flex items-center">
-                  <a href="#contact">Contactanos</a>
+                <a href="#contact" className="mt-8 px-8 py-3 bg-gradient-to-r from-white to-orange-50 text-[rgb(238,106,26)] font-semibold rounded-lg hover:opacity-90 transition duration-300 flex items-center">
+                  Contactanos
                   <ChevronRight className="ml-2 h-5 w-5" />
-                </button>
+                </a>
               </div>
             </div>
             <div className="md:w-1/2 mt-10 md:mt-0">
