@@ -3,7 +3,13 @@ import { Code2, ChevronRight, Globe, Zap, Shield, Code, UserCheck, Palette, Cpu,
 import Image from 'next/image';
 import ContactForm from './ContactForm';
 
-function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+interface ServiceCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
       <div className="mb-4">{icon}</div>
@@ -13,7 +19,13 @@ function ServiceCard({ icon, title, description }: { icon: React.ReactNode; titl
   );
 }
 
-function ProjectCard({ image, title, description }: { image: string; title: string; description: string }) {
+interface ProjectCardProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+function ProjectCard({ image, title, description }: ProjectCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
       <div className="relative h-48 w-full">
@@ -68,10 +80,10 @@ export default function Home() {
                 <p className="mt-6 text-lg text-orange-100">
                   Nos dedicamos a transformar ideas en realidades digitales. Somos expertos en el desarrollo web y ofrecemos una amplia gama de servicios para ayudarte a crecer en línea.
                 </p>
-                <a href="#contact" className="mt-8 px-8 py-3 bg-gradient-to-r from-white to-orange-50 text-[rgb(238,106,26)] font-semibold rounded-lg hover:opacity-90 transition duration-300 flex items-center">
-                  Contactanos
+                <button className="mt-8 px-8 py-3 bg-gradient-to-r from-white to-orange-50 text-[rgb(238,106,26)] font-semibold rounded-lg hover:opacity-90 transition duration-300 flex items-center">
+                  <a href="#contact">Contactanos</a>
                   <ChevronRight className="ml-2 h-5 w-5" />
-                </a>
+                </button>
               </div>
             </div>
             <div className="md:w-1/2 mt-10 md:mt-0">
