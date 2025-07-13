@@ -2,12 +2,14 @@
 import { Code2, ChevronRight, Globe, Zap, Shield, Code, UserCheck, Palette, Cpu, Smartphone, BrainCircuit, Paintbrush, ShoppingBag, Mail, UtensilsCrossed, Contact } from 'lucide-react';
 import Image from 'next/image';
 import ContactForm from './ContactForm';
+import React from 'react';
 
-interface ServiceCardProps {
+type ServiceCardProps = {
   icon: React.ReactNode;
   title: string;
   description: string;
-}
+};
+
 
 function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
@@ -19,13 +21,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
   );
 }
 
-interface ProjectCardProps {
-  image: string;
-  title: string;
-  description: string;
-}
-
-function ProjectCard({ image, title, description }: ProjectCardProps) {
+function ProjectCard({ image, title, description }: { image: string; title: string; description: string }) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
       <div className="relative h-48 w-full">
